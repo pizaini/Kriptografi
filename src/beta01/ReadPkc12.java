@@ -35,7 +35,7 @@ public class ReadPkc12 {
     public static void main(String[] args) throws KeyStoreException, NoSuchProviderException, IOException, NoSuchAlgorithmException, CertificateException, UnrecoverableKeyException {
         KeyStore pkcs12Store = KeyStore.getInstance("PKCS12", "BC");
         pkcs12Store.load(new FileInputStream("D:\\rootPrivateKeySS.p12"), "pass".toCharArray());
-        System.out.println("########## KeyStore Dump "+pkcs12Store.size());
+        System.out.println("########## KeyStore Dump. Size: "+pkcs12Store.size());
         
         //KeyPair
         PrivateKey privateKey = null;
